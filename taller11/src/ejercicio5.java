@@ -9,12 +9,8 @@ public class ejercicio5 {
 
     public static void main(String[] args) {
         Scanner tcl = new Scanner(System.in);
-        int f, c, f2, c2;
-        System.out.print("Ingresar limite de  las matricez: ");
-        f = tcl.nextInt();
-        f2 = tcl.nextInt();
-        c = tcl.nextInt();
-        c2 = tcl.nextInt();
+        int f = 5, c = 5, f2 = 5, c2 = 5;
+
         int matriz[][] = new int[f][c];
         int matriz2[][] = new int[f][c];
         matriz(matriz, matriz2);
@@ -85,19 +81,19 @@ public class ejercicio5 {
     }
 
     public static void multi(int matriz[][], int matriz2[][], int f, int c, int f2, int c2) {
-        if (c==f2) {
-            int multi[][]= new int[f][c2];
+        if (c == f2) {
+            int multi[][] = new int[f][c2];
             for (int i = 0; i < matriz.length; i++) {
                 for (int j = 0; j < matriz2[0].length; j++) {
                     for (int k = 0; k < matriz[0].length; k++) {
-                        multi[i][j]+=matriz[i][k]*matriz[k][j];
+                        multi[i][j] += matriz[i][k] * matriz[k][j];
                     }
-                    
+
                 }
             }
             for (int i = 0; i < multi.length; i++) {
                 for (int j = 0; j < multi[0].length; j++) {
-                    System.out.print(multi[i][j]+" ");
+                    System.out.print(multi[i][j] + " ");
                 }
                 System.out.println(" ");
             }
